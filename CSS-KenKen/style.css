@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: fit-content;
+    height: fit-content;
+    margin: 1rem auto;
+    padding: 0;
+    background-color: burlywood;
+}
+
+.grid {
+    display: grid;
+    grid-template: repeat(4, 1fr)/ repeat(4, 1fr);
+    width: min(80vw, 80vh);
+    height: min(80vw, 80vh);
+    border: 0.5rem solid black;
+}
+
+.grid-items {
+    border: 0.1rem solid gray;
+    font-size: 2rem;
+    background-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box1,
+#box2,
+#box3,
+#box4,
+#box5,
+#box8,
+#box9,
+#box10,
+#box11 {
+    border-bottom: 0.5rem solid #000;
+}
+
+#box3,
+#box7,
+#box10,
+#box11,
+#box12,
+#box15 {
+    border-left: 0.5rem solid #000;
+}
+
+.prompt {
+    position: absolut;
+    top: 0%;
+    left: 0%;
+}
+
+.answer {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+}
+
+.special {
+    border: none;
+    font-size: 1.25rem;
+}
