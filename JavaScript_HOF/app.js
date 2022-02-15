@@ -1,6 +1,7 @@
 console.log("JS HOF Excercise");
 
-let plus = (initialNum) => {
+//Exercise 1
+const plus = (initialNum) => {
     return (number) => {
         return initialNum + number;
     };
@@ -13,6 +14,10 @@ console.log(plus15(45)); // 60
 console.log(plus15(-10)); // 5
 
 console.log(plus15(10)); // 25
+
+
+
+
 
 
 
