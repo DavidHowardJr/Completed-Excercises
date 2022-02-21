@@ -18,3 +18,50 @@
     height: 150px;
     margin: -2px 0px 0px 16px;
 }
+
+.profile {
+    margin: -630px 0px 300px 1609px;
+}
+
+.box {
+    margin: -580px 0px 300px 1593px;
+    background-color:rgba(247, 247, 247, 0.897); 
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(168, 168, 168);
+    border-radius: 1px;
+    height: 450px;
+    width: 250px;
+
+}
+
+.box>p {
+    display:block;
+    text-align: left;
+    margin-top: -8px;
+    position: relative;
+    top: 220px;
+    left: 50px;
+    font-size: 14px;
+}
+
+.markswebsite {
+    position: relative;
+    top: 220px;
+    left: 50px;
+    font-size: 14px;
+}
+
+body>div>h5 {
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    top: 0px;
+
+}
+
+.mark {
+    position: relative;
+    top: -11px;
+}
+
