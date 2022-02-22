@@ -19,8 +19,19 @@
     margin: -2px 0px 0px 16px;
 }
 
+.maintext {
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgb(172, 236, 255);
+    width: 1700px;
+    height: 1600px;
+    position: relative;
+    left: 206px;
+    bottom: 840px;
+}
 .profile {
     margin: -630px 0px 300px 1609px;
+    z-index: 7;
 }
 
 .box {
@@ -32,6 +43,8 @@
     border-radius: 1px;
     height: 450px;
     width: 250px;
+    z-index: 1;
+    opacity: 2;
 
 }
 
@@ -66,16 +79,22 @@ body>div>h5 {
 }
 
 body {
-    background-color:rgb(248, 248, 248)
+    background-color: #F6F6F6;
+    background-size: cover;
 }
 
-.maintext {
-    border-style: solid;
-    border-width: 1px;
-    border-color:rgb(172, 236, 255);
-    width: 1700px;
-    height: 1600px;
-    position: relative;
-    left: 206px;
-    bottom: 840px;
+
+.searchBox {
+    padding: 5px 100px 5px 20px;
+    float: right; 
+    margin-right: 20px;
+    margin-top: -808px;
+}
+
+.mainline {
+    line-height: 18px;
+}
+
+.img {
+    z-index: 8;
 }
