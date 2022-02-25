@@ -1,87 +1,52 @@
 console.log("Hello World!");
 
-// INITIALIZING VARIABLES
+console.log(100 < 90) // false
+console.log("100" < "90") // true
 
-let myName = "David";
-const numStates = 50;
-let hasTerritories = true;
+let gradesStr = prompt(
+    "List all grades in the following format:\n99,97,88,89,78"
+); // returns a string!!!
 
-// OPERATORS
-
-let five = 5;
-let four = 4;
-
-let sum = five + four;
-let isGreater = five > four;
-let product = 231 * 4;
-
-// COMMENTS
-
-// Single Line comment
-
-/* multi
-line 
-comment
-*/
-
-function sayHello() {
-    alert("Hello World!");
-}
-
-sayHello();
-
-function checkAge(name, age) {
-    if (age < 21) {
-        alert("Sorry " + name + ", your aren't old enough to view this page!");
-    }
-}
-
-// checkAge("Charles", 27); 
-// checkAge("Abby", 21); 
-// checkAge("James", 18); 
-// checkAge("John", 17); 
-
-let favVeggies = ["Brocolli", "Zuchini", "Carrot", "potato", "Tomato"];
-
-favVeggies.forEach(function (veggie) {
-    console.log(veggie);
+// Creates an array of multiple values from one string, split on a specified character
+let gradesArr = gradesStr.split(",").map(function (strNum) {
+    return parseInt(strNum);
 });
 
-let people = [
-    {
-        name: "john",
-        age: 14,
-    },
-    {
-        name: "seth",
-        age: 16,
-    },
-    {
-        name: "Ben",
-        age: 21,
-    },
-    {
-        name: "Cruz",
-        age: 22,
-    },
-    {
-        name: "Michael",
-        age: 51,
-    },
-];
+// Return average of grades 
+function calcAverage(numsList) {
+    let sum = numsList.reduce(function (sum, num) {
+        return sum + parseInt(num); // Convert the strings into numbers
+    }, 0);
 
-people.forEach(function (person) {
-    checkAge(person.name, person.age);
-});
-
-function getLength(phrase) {
-    return phrase.length;
+    return sum / numsList.length;
 }
 
-let result = getLength("Hello World");
+let classAverage = calcAverage(gradesArr);
 
-if (result % 2 == 0) {
-    console.log("The world is nice and even!");
-} else {
-    console.log("The world is an odd place!");
+alert(`The class grade average was ${classAverage}`);     // check highest number
+
+function highestNum(numsList) {
+    return numsList.reduce(function (highest, num) {
+        if (parseInt(highest) < parseInt(num)) {
+            if (highest < num) {
+                return num;
+            } else {
+                return highest;
+            }
+        }
+    });
 }
+
+function lowestNum(numsList) {
+    return numsList.reduce(function (lowest, num) {
+        if (parseInt(lowest) > parseInt(num)) {
+            return num;
+        } else {
+            return lowest;
+        }
+    });
+}
+
+alert(`The class highest grade was ${highestNum(gradesArr)}`);
+
+alert(`The class lowest grade was ${lowestNum(gradesArr)}`);
