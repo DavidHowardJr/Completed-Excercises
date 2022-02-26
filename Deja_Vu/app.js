@@ -2,7 +2,7 @@ console.log("Deja Vu");
 
 let userName = prompt("Name please.");
 
-let numberSet = prompt("Choose a set of numbers to guess between: 1 through 10, 11 through 20, 21 through 30. ");
+let numberSet = prompt("Choose a set of numbers to guess between: 1 through 10, 11 through 20, 21 through 30. (To choose type out # through #) ");
 
 let minGuess;
 let maxGuess;
@@ -41,13 +41,13 @@ if (userGuess < minGuess || userGuess > maxGuess) {
 } else {
   if (rand > userGuess) {
     alert("You guessed too low!");
-    prompt (`Guess again ${userName}, and remember its between ${minGuess} and ${maxGuess}.`);
   } else if (rand < userGuess) {
     alert("You guessed too high!");
-    prompt (`Guess again ${userName}, and remember its between ${minGuess} and ${maxGuess}.`);
   } else {
     alert(`Congrats your did it! Dosn't it feel like a real win ${userName}?!`);
   }
 }
+
+let playAgain = prompt(`Would you like to play again ${userName}?`);
 
 
