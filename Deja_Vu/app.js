@@ -41,8 +41,10 @@ if (userGuess < minGuess || userGuess > maxGuess) {
 } else {
   if (rand > userGuess) {
     alert("You guessed too low!");
+    prompt (`Guess again ${userName}, and remember its between ${minGuess} and ${maxGuess}.`);
   } else if (rand < userGuess) {
     alert("You guessed too high!");
+    prompt (`Guess again ${userName}, and remember its between ${minGuess} and ${maxGuess}.`);
   } else {
     alert(`Congrats your did it! Dosn't it feel like a real win ${userName}?!`);
   }
