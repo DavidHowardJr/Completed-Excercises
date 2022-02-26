@@ -1,4 +1,7 @@
+// Strict Mode
 "use strict";
+
+
 let userMessage;
 let repeatMessageThisManyTimes;
 
