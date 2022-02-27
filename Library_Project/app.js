@@ -1,5 +1,18 @@
 
+
+// PROJECT Section
+console.log("PROJECT:\n============\n");
+
+// DOM SELECTIONS
+const title = document.querySelector("bookTitle");
+const author = document.querySelector("bookAuthor");
+const releaseDate = document.querySelector("bookReleaseDate");
+const form = document.querySelector("form");
+
+// CLASSES
+// Book
 class Book {
+  // properties: title,author, release date, in stock, has been read
   constructor(id, title, author, releaseDate) {
     this.id = id;
     this.title = title;
@@ -10,9 +23,11 @@ class Book {
   }
 }
 
+// Library
 class Library {
   // properties: how many books, list of books, form elements
   constructor() {
+    // DOM SELECTIONS
     this.DOM = {
       bookContainer: document.querySelector("#library-container"),
       form: {
@@ -20,16 +35,18 @@ class Library {
         title: document.querySelector("#bookTitle"),
         author: document.querySelector("#bookAuthor"),
         releaseDate: document.querySelector("#bookReleaseDate"),
-      },
+      }
     };
     this.nextId = 0;
     this.count = 0;
     this.books = [];
 
+    // EVENT LISTENERS
     this.DOM.form.self.addEventListener("submit", (e) =>
       this.handleFormSubmission(e)
     );
   }
+  // actions: add new book, update stock, remove book, update the display
   addBook(title, author, releaseDate) {
     let newBook = new Book(this.nextId++, title, author, releaseDate);
     this.books.unshift(newBook);
@@ -38,7 +55,7 @@ class Library {
     this.displayBooks();
   }
 
-  handleFormSubmission(event) {
+  handlerFormSubmission(event) {
     event.preventDefault();
     console.log(this);
     this.addBook(
@@ -47,8 +64,9 @@ class Library {
       this.DOM.form.releaseDate.value
     );
 
-    this.DOM.form.title.value = "";
-    this.DOM.form.author.value = "";
+    // Clear input values
+    this.DOM.form.title.Value = "";
+    this.DOM.form.author.Value = "";
     this.DOM.form.releaseDate.value = "";
   }
 
@@ -57,7 +75,7 @@ class Library {
   removeBook(id) {}
 
   displayBooks() {
-    this.DOM.bookContainer.innerHTML = "";
+    this.DOM.bookContainer.innerHTML = ""; 
     this.books.forEach((book) => {
       const card = document.createElement("div");
       card.classList.add("card");
@@ -72,4 +90,6 @@ class Library {
     });
   }
 }
+
 let library = new Library();
+
