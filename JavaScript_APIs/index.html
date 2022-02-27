@@ -4,37 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript APIs</title>
+    <script src="app.js" defer></script>
   </head>
   <body>
-    <main
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      "
-    >
-      <div>
-        <h1>JavaScript APIs</h1>
-        <p>
-          Open the Browser Console to view your work (Right-Click => Inspect or
-          fn+F12)
-        </p>
-        <div id="inputContainer">
-          <!-- Add label, input, and button HERE -->
-        </div>
-
-        <div id="imageContainer" style="max-width: 680px">
-          <img
-            src="#"
-            alt="Giphy Selection"
-            style="width: 100%; height: auto"
-          />
-        </div>
-      </div>
-    </main>
-
-    <script src="app.js"></script>
+ <h1>Fetch API</h1>
+ <form>
+   <input type="text" id="query" 
+   placeholder="Dogs" />
+   <button type="submit">Search</button>
+ </form>
+ <img id="img" src="#" alt="" />
+ <p id="result"></p>
   </body>
 </html>
 
