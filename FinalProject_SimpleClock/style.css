@@ -1,0 +1,13 @@
+body {
+    background: beige;
+}
+
+.clk {
+    font-family: monospace;
+    font-size: 60px;
+    color: #ffb921ce;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    letter-spacing: 20px;
+}
